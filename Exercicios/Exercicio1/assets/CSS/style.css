@@ -6,7 +6,7 @@ h1 {
 }
 
 /* Fontes dos textos -> Fiz uso de classe pq se repete em diversas partes */
-.font {
+#font {
     font-family: Arial, Helvetica, sans-serif;
 }
 
