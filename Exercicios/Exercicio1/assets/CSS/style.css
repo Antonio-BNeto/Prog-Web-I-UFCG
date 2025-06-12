@@ -5,7 +5,7 @@ h1 {
     text-align: center;
 }
 
-/* Fontes dos textos -> Fiz uso de classe pq se repete em diversas partes */
+/* Fontes dos textos -> Fiz uso de id pq posso utilizar apenas uma vez na section */
 #font {
     font-family: Arial, Helvetica, sans-serif;
 }
