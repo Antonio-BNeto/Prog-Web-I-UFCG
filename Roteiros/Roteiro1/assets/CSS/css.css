@@ -1,0 +1,72 @@
+.principal{
+    margin-left: 5%;
+    margin-right:5%;
+    margin-bottom:2%;
+}
+
+/* customizando o container */
+
+#container {
+    display: flex;
+}
+
+
+/* Customização da navegação lateral */
+
+#nav_lateral {
+    padding: 20px;
+    background-color: rgb(81, 250, 30);
+}
+
+#nav_lateral ul{
+    list-style: none;
+    text-align: end;
+}
+
+#nav_lateral ul li {
+    margin-left: 0px;
+}
+
+/* Customização dos body e do html */
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* customização dos links */
+
+a {
+    text-decoration: none;
+}
+
+header a, #nav_lateral a {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+header div {
+    align-items: center;
+}
+
+/* Customizaçâo do padding do footer e do header*/
+
+header, footer {
+    padding: 25px;
+}
+
+/* Customizando o header */
+
+header {
+    background-color: rgb(112, 202, 243);
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Customizando o rodapé */
+
+footer {
+    background-color: rgb(255, 166, 1);
+    text-align: center;
+}
