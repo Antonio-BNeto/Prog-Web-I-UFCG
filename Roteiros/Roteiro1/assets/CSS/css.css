@@ -14,6 +14,7 @@ html, body {
 
 /* Customização cabeçalho/Header */
 header {
+    font-size: large;
     background-color: rgb(112, 202, 243);
     display: flex;
     justify-content: space-between;
@@ -27,7 +28,7 @@ footer {
 
 /* Customizaçâo do padding do footer e do header*/
 header, footer {
-    font-size: large;
+    font-size: larger;
     padding: 40px;
 }
 
@@ -40,6 +41,9 @@ a {
 /* Customizando os links da barra de navegação lateral e do header */
 header a, #nav_lateral a {
     color: rgb(0, 0, 0);
+}
+
+header a {
     padding: 10px;
 }
 
@@ -67,9 +71,10 @@ h1, h2 {
 }
 
 /* Customização da navegação lateral */
+
 #nav_lateral {
     padding-left: 20px;
-    padding-right: 30px;
+    padding-right: 150px;
     padding-top: 20px;
     font-size: large;
     background-color: rgb(69, 248, 143);
@@ -88,6 +93,7 @@ h1, h2 {
     padding-left: 0;
 }
 
-#nav_lateral li::before {
-    content: "-";
+
+#container #nav_lateral{
+    padding-bottom: 50px;
 }
