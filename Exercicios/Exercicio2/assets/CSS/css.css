@@ -1,0 +1,98 @@
+/* Customização entregue pelo professor */
+.principal{
+    margin-left: 5%;
+    margin-right:5%;
+    margin-bottom:2%;
+}
+
+/* Customização do body e do html */
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Customização cabeçalho/Header */
+header {
+    font-size: large;
+    background-color: rgb(112, 202, 243);
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Customizando o rodapé/footer */
+footer {
+    background-color: rgb(250, 183, 0);
+    text-align: center;
+}
+
+/* Customizaçâo do padding do footer e do header*/
+header, footer {
+    font-size: larger;
+    padding: 40px;
+}
+
+/* Customização default links */
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 255);
+}
+
+/* Customizando os links da barra de navegação lateral e do header */
+header a, #nav_lateral a {
+    color: rgb(0, 0, 0);
+}
+
+header a {
+    padding: 10px;
+}
+
+/* Retirando o negrito que estava no h1 e h2 */
+h1, h2 {
+    margin-top: 35px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+/* Alterando a display do id container */
+#container {
+    display: flex;
+}
+
+/* Customização da classe links_Paginas */
+.links_Paginas {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.links_Paginas a {
+    padding: 5px;
+}
+
+/* Customização da navegação lateral */
+
+#nav_lateral {
+    padding-left: 20px;
+    padding-right: 150px;
+    padding-top: 20px;
+    font-size: large;
+    background-color: rgb(69, 248, 143);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#nav_lateral ul{
+    list-style: none;
+    text-align: end;
+}
+
+#nav_lateral ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#container #nav_lateral{
+    padding-bottom: 50px;
+}
