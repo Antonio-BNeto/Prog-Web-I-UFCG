@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        const fatorial = () => {
+            let listaInput = document.getElementById("lista").value;
+            listaInput = listaInput.split(',').map(Number);
+
+            let listaFatorial = []
+
+            listaInput.forEach((elem) => {
+                listaFatorial.push(fatorialRecursivo(elem))
+            });
+
+            console.log(listaFatorial)
+
+            let saida = listaFatorial.join(", ");
+
+            document.getElementById("saida").value = saida;
+        }
+
+        const fatorialRecursivo = (valor) => {
+            if(valor == 0){
+                return 1;
+
+            }
+            return valor * fatorialRecursivo(valor-1);
+        }
+    
+    </script>
+</head>
+<body>
+    Lista: <input type="text" id="lista">
+    <input type="button" value="calcular Fatorial" onclick="fatorial()">
+    <br />
+    Fatorial: <input id="saida" disabled="desabled">
+</body>
+</html>

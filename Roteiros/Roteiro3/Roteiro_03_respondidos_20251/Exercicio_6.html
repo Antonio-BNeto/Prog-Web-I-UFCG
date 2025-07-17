@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        const ordenaLista = () => {
+
+            let listaInput = document.getElementById("lista").value;
+            let listaOrdenada = listaInput.split(',').map(Number);
+
+            listaOrdenada.sort(function(a, b) {
+                return a - b
+            });
+
+            let saida = listaOrdenada.join(", ");
+
+            document.getElementById("saida").value = saida;
+
+        }
+
+    </script>
+</head>
+<body>
+    Lista: <input type="text" id="lista">
+    <input type="button" value="Ordenar" onclick="ordenaLista()">
+    <br />
+    Lista Ordenada: <input id="saida" disabled="desabled">
+</body>
+</html>

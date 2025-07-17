@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        const somaImparesMult3 = () => {
+
+            let listaInput = document.getElementById("lista").value;
+            listaInput = listaInput.split(',').map(Number);
+
+            let soma = 0;
+
+            listaInput.forEach((elem) => {
+                if(Number.isInteger(elem) && !ehPar(elem) && mult3(elem)) {
+                    soma += elem;
+                }
+            });
+            
+            document.getElementById("saida").value = soma;
+
+        }
+
+        const ehPar = (value) => {
+            return value % 2 == 0
+        }
+
+        const mult3 = (value) => {
+            return value % 3 == 0
+        }
+    
+    </script>
+</head>
+<body>
+    Lista: <input type="text" id="lista">
+    <input type="button" value="Somar impares múltiplos de 3" onclick="somaImparesMult3()">
+    <br />
+    Soma: <input id="saida" disabled="desabled">
+</body>
+</html>
