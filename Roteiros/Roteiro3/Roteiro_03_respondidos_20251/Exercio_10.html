@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        const inverteLista = () => {
+            let listaInput = document.getElementById("lista").value;
+            listaInput = listaInput.split(',')
+
+            let saida = listaInput.reverse().join(", ");
+
+            document.getElementById("saida").value = saida
+        }
+    
+    </script>
+</head>
+<body>
+    Lista: <input type="text" id="lista">
+    <input type="button" value="Inverte lista" onclick="inverteLista()">
+    <br />
+    Invertida: <input id="saida" disabled="desabled">
+</body>
+</html>
