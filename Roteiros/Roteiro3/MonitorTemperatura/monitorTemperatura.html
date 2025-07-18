@@ -18,6 +18,8 @@
 
   <button onclick="calcularMedia()">Calcular Média</button>
   <button onclick="calcularMediaMovel()">Calcular Média Movel (3 dias)</button>
+  <button onclick="analisarTendencia()">Analisar Tendência (7 dias)</button>
+  <button onclick="alertaTemperaturaExtema()">Alerta de Temperatura Extrema</button>
 
   <div id="resultado"></div>
 
@@ -99,6 +101,60 @@
 
       document.getElementById('resultado').innerHTML = resultadoHTML;
         
+    }
+
+    function analisarTendencia() {
+      if(temperaturas.length < 7) {
+        alert("É necessário pelo menos 7 temperaturas para analisar a tendência");
+        return;
+      }
+
+      const itensTemperatura = document.querySelectorAll('#listaTemperaturas li');
+      const ultimos7Itens = Array.from(itensTemperatura).slice(-7);
+
+      // Converter o textContent de cada item para float
+      const ultimos7Dias = ultimos7Itens.map(item => {
+          // Remove "°C" e converte para float
+          return parseFloat(item.textContent.replace('°C', ''));
+      });
+
+      // Fiz uso de regressão linear para calcular a tendência das temperaturas
+
+      let somaX, somaY, somaXY, somaX2;
+      somaX = somaY = somaXY = somaX2 = 0;
+
+      for(let i = 0; i < 7; i++) {
+        somaX += i
+        somaY += ultimos7Dias[i]
+        somaXY += i * ultimos7Dias[i]
+        somaX2 += i * i;
+      }
+
+      // Calcular a inclinação da reta
+      /*
+        inclinacao = n⋅(∑xy) − (∑x)⋅(∑y) / n⋅∑(x²) − (∑x)²​
+
+        n->número de dias(7)
+        x->índice do dia(0 a 6)
+        y->temperatura no dia x
+        ∑->somátorio
+
+      */
+      const inclinacao = (7 * somaXY - somaX * somaY) / (7 * somaX2 - somaX * somaX);
+      
+      const variacao = ultimos7Dias[6] - ultimos7Dias[0]
+
+      if(inclinacao > 0.1) {
+        alert("Tendência a Aquecimento");
+
+      }else if (inclinacao < -0.1) {
+        alert("Tendência a Resfriamento");
+
+      }else {
+        alert("Sem padrão claro");
+
+      }
+
     }
 
   </script>
