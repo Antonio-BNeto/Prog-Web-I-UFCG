@@ -7,37 +7,48 @@
 
     <script>
 
-        const fatorial = () => {
+        const calcularEstatisticas = () => {
+            
             let listaInput = document.getElementById("lista").value;
             listaInput = listaInput.split(',').map(Number);
 
-            let listaFatorial = []
+            //Calcular a média
+            let soma = listaInput.reduce((acc, value) => acc + value, 0);
+            let mediaAritmetica = soma / listaInput.length;
 
-            listaInput.forEach((elem) => {
-                listaFatorial.push(fatorialRecursivo(elem))
+            // calcular quantos positivos e negativos tem na lista de entrada
+            let positivos = 0;
+            let negativos = 0;
+
+            listaInput.forEach(element => {
+                if(element > 0) positivos++;
+                else if (element < 0) negativos++;  
             });
 
-            console.log(listaFatorial)
+            // calcular percentual de positivos e negativos
+            let percentualPositivos = (positivos / listaInput.length) * 100;
+            let percentualNegativos = (negativos / listaInput.length) * 100;
 
-            let saida = listaFatorial.join(", ");
+            const saida = `
+                <p>Média aritmética: ${mediaAritmetica.toFixed(2)}</p>
+                <p>Quantidade de positivos: ${positivos}</p>
+                <p>Quantidade de negativos: ${negativos}</p>
+                <p>Percentual de positivos: ${percentualPositivos.toFixed(2)}%</p>
+                <p>Percentual de negativos: ${percentualNegativos.toFixed(2)}%</p>
+            `
 
-            document.getElementById("saida").value = saida;
+            document.getElementById("saida").innerHTML = saida
         }
-
-        const fatorialRecursivo = (valor) => {
-            if(valor == 0){
-                return 1;
-
-            }
-            return valor * fatorialRecursivo(valor-1);
-        }
+        
     
     </script>
 </head>
 <body>
     Lista: <input type="text" id="lista">
-    <input type="button" value="calcular Fatorial" onclick="fatorial()">
+    <input type="button" value="calcular Fatorial" onclick="calcularEstatisticas()">
     <br />
-    Fatorial: <input id="saida" disabled="desabled">
+    <div id="saida"></div>
+    
+
 </body>
 </html>

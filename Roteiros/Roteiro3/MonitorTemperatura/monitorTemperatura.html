@@ -17,6 +17,7 @@
   <ul id="listaTemperaturas"></ul>
 
   <button onclick="calcularMedia()">Calcular Média</button>
+  <button onclick="calcularMediaMovel()">Calcular Média Movel (3 dias)</button>
 
   <div id="resultado"></div>
 
@@ -50,7 +51,14 @@
       }
 
       //Questão 01 -TODO
+      let lista = document.getElementById("listaTemperaturas");
+      let soma = 0;
 
+      for (let i = 0; i< lista.children.length; i++) {
+        soma += parseFloat(lista.children[i].textContent);
+      }
+
+      let media = soma / lista.children.length
 
       let mensagem;
       if (media > 30) {
@@ -67,6 +75,32 @@
         <div class="alerta">${mensagem}</div>
       `;
     }
+
+    function calcularMediaMovel() {  
+      if(temperaturas.length < 3) {
+        alert("É necessárrio pelo menos 3 temperaturas")
+        return
+      }
+
+      let mediasMoveis = [];
+      let resultadoHTML = "<h3>Médias Móveis (3 dias):</h3><ul>";
+
+      for (let i = 0; i <= temperaturas.length - 3; i++) {
+        const soma = temperaturas[i] + temperaturas[i + 1] + temperaturas[i + 2];
+        const media = soma / 3;
+
+        mediasMoveis.push(media);
+        resultadoHTML += `<li>Dias ${i + 1}-${i + 3}: ${media.toFixed(2)} °C</li>`;
+      }
+
+      resultadoHTML += "</ul>";
+
+      const mediaDasMedias = mediasMoveis.reduce((a, b) => a + b, 0) / mediasMoveis.length;
+
+      document.getElementById('resultado').innerHTML = resultadoHTML;
+        
+    }
+
   </script>
 
 </body>
