@@ -30,12 +30,11 @@ console.log(nParamFunction(1, 2, 3, 4, "2", 5))
 
 // ============ Questão 3 =============
 
-const lista = [1, 2, 3]
-const lista2 = [...lista]
+const joinObjs = (obj1,obj2) => {
+    return {...obj1, ...obj2}
+}
 
-console.log(lista2)
+console.log(joinObjs({nome: "TESTE", cpf: "123"}, {nome: "Gabriel", nomePai : "Qualquer coisa"}))
 
-// obj a = {nome: "TESTE", cpf: "123"}
-// obj b = {nome: "Gabriel", nomePai = "Qualquer coisa"}
+// ============ Questão 4 =============
 
-// obj c = {nome: "Gabriel", cpf: "123", nomePai: "Qualquer coisa"}
