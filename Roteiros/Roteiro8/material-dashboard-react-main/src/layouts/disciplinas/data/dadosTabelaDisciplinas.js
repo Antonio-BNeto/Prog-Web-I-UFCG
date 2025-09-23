@@ -18,7 +18,7 @@ export default function data() {
         ),
         professor: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            Rohit
+            Rohit Gheyi
           </MDTypography>
         ),
       },
@@ -30,7 +30,7 @@ export default function data() {
         ),
         professor: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            Manel
+            Thiago Emmanuel Pereira da Cunha Silva
           </MDTypography>
         ),
       },
@@ -42,7 +42,7 @@ export default function data() {
         ),
         professor: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            Fabio
+            Fabio Jorge Almeida Morais
           </MDTypography>
         ),
       },
@@ -54,7 +54,7 @@ export default function data() {
         ),
         professor: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            Professor a definir
+            Thiago Pereira da Nobrega
           </MDTypography>
         ),
       },
