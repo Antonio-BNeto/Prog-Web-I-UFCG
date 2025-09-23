@@ -53,7 +53,7 @@ export default function data() {
       { Header: "aluno", accessor: "aluno", width: "45%", align: "left" },
       { Header: "função", accessor: "funcao", align: "left" },
       { Header: "status", accessor: "status", align: "center" },
-      { Header: "data de Nascimento", accessor: "data_nascimento", align: "center" },
+      { Header: "início no projeto", accessor: "inicio", align: "center" },
       { Header: "ação", accessor: "acao", align: "center" },
     ],
 
@@ -69,12 +69,12 @@ export default function data() {
         funcao: <Funcao title="Líder" description="UFCG" />,
         status: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="ativo" color="sucess" variant="gradient" size="sm" />
+            <MDBadge badgeContent="ativo" color="success" variant="gradient" size="sm" />
           </MDBox>
         ),
-        data_nascimento: (
+        inicio: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            01/07/2006
+            18/09/2025
           </MDTypography>
         ),
         acao: (
@@ -90,12 +90,12 @@ export default function data() {
         funcao: <Funcao title="Desenvolvedor Front-end" description="UFCG" />,
         status: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="ativo" color="sucess" variant="gradient" size="sm" />
+            <MDBadge badgeContent="ativo" color="success" variant="gradient" size="sm" />
           </MDBox>
         ),
-        data_nascimento: (
+        inicio: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            03/11/2002
+            18/09/2025
           </MDTypography>
         ),
         acao: (
@@ -115,12 +115,12 @@ export default function data() {
         funcao: <Funcao title="Desenvolvedor Front-end" description="UFCG" />,
         status: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="ativo" color="sucess" variant="gradient" size="sm" />
+            <MDBadge badgeContent="ativo" color="success" variant="gradient" size="sm" />
           </MDBox>
         ),
-        data_nascimento: (
+        inicio: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            15/05/2004
+            18/09/2025
           </MDTypography>
         ),
         acao: (
